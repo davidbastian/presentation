@@ -1,0 +1,54 @@
+@import "./reset.scss";
+@import "./font.scss";
+@import "./icons.scss";
+@import "./variables.scss";
+html {
+    // overflow: hidden;
+}
+
+::selection {
+   /* color: $black;
+    background: $white;*/
+}
+
+html,
+body {
+    font-size: $font-size;
+    color: $black;
+    font-family: $font-family-base;
+    overflow-x: hidden;
+    background-color: $white;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 0px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $black;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $white;
+        border-radius: 1000px;
+        &:hover {
+            // background-color: $brand-color;
+        }
+    }
+}
+
+
+//container
+.wrap-container {}
+
+.container {
+    width: 90%;
+    max-width: $max-width-container;
+    margin: 0 auto;
+}
+
+
+.module {
+    padding: 80px 0;
+    @media (max-width: $screen-md-min) {
+        padding: 10% 0;
+    }
+}
+

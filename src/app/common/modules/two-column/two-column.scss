@@ -1,0 +1,72 @@
+@import "../../../global/styles/base/variables.scss";
+.two-column {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: 49%;
+            display: block;
+            // background-color: $white;
+            a {
+                display: block;
+                .caption-container {
+                    padding: 25px;
+                    padding-left: 0px;
+                }
+                .image-cover {
+                    position: relative;
+                    &:before {
+                        padding-top: 56.25%;
+                        content: "";
+                        display: block;
+                    }
+                    div {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-size: cover;
+                        position: absolute;
+                    }
+                    .two-column-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        span {
+                            display: block;
+                            font-size: 8vw;
+                            color: white;
+                             @media (max-width:$screen-tn-min) {
+                                 font-size: 80px;
+
+                             }
+                        }
+                        h2 {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:$screen-tn-min) {
+            display: block;
+            li {
+                width: 100%;
+                margin-bottom: 5%;
+                a {
+                    .image-cover {
+                        &:before {
+                            padding-top: 40%;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
