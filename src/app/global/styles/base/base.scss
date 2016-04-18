@@ -1,5 +1,5 @@
 @import "./reset.scss";
-@import "./font.scss";
+//@import "./font.scss";
 @import "./icons.scss";
 @import "./variables.scss";
 html {
@@ -7,7 +7,7 @@ html {
 }
 
 ::selection {
-   /* color: $black;
+    /* color: $black;
     background: $white;*/
 }
 
@@ -34,21 +34,32 @@ body {
     }
 }
 
+//h
+h1 {
+
+}
+h2 {
+    font-size: 4vw;
+    line-height: 1.4em;
+}
 
 //container
 .wrap-container {}
 
 .container {
     width: 90%;
-    max-width: $max-width-container;
+    //max-width: $max-width-container;
     margin: 0 auto;
-}
-
-
-.module {
-    padding: 80px 0;
-    @media (max-width: $screen-md-min) {
-        padding: 10% 0;
+    .center {
+        display: flex;
+        align-items: center;
     }
 }
 
+.module {
+    height: 100vh;
+    /*padding: 80px 0;
+    @media (max-width: $screen-md-min) {
+        padding: 10% 0;
+    }*/
+}
